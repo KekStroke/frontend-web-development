@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    width: 510px;
+    margin: 1.5em auto 1.5em;
+    /* background-color: rgb(241, 249, 255); */
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav > a:link {
+    color: black;
+}
+
+nav > a:visited {
+    color: black;
+}
+
+nav > a.active, nav > a:hover {
+    border-color: rgb(207, 207, 207);
+}
+
+nav > a {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border: 2px black solid;
+    text-decoration: none;
+}
+
+main{
+    margin: 5em 20% 0;
+}
+
+.profile-picture {
+    float: left;
+    margin-left: -1.1em;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.contacts img {
+    height: 1em;
+    width: 1em;
+    position: relative;
+    margin-left: 5px;
+    top: 3px;
+}
+
+.contacts a:link {
+    color:rgb(0, 94, 255);
+}
+
+.contacts a:visited {
+    color:rgb(0, 94, 255);
+}
+
+.contacts a:hover {
+    color:rgb(0, 71, 193);
+}
+
+.right-align {
+    text-align: right;
+}
+
+.centered {
+    text-align: center;
+}
+
+h1.centered {
+    margin-bottom: 2em;
+}
