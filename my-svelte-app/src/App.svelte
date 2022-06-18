@@ -4,7 +4,7 @@
   import Message from "./Message.svelte";
   import Input from "./Input.svelte";
 
-  let messages: string[];
+  let messages: string[] = [];
 
   const socket = io("http://10.90.137.175/");
   socket.on("chat message", function (msg: string) {
