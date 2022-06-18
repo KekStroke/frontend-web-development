@@ -1,8 +1,10 @@
 <script lang="ts">
+  export let username: string;
   export let message: string;
 </script>
 
 <li>
+  <span style="font-weight: bold;">{username}</span>
   {message}
 </li>
 

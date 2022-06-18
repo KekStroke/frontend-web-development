@@ -1,13 +1,14 @@
 <script lang="ts">
   import { io } from "socket.io-client";
 
-  import Message from "./Message.svelte";
+  import Message from "./message.svelte";
+  import type { Message as MessageType } from "./message";
   import Input from "./Input.svelte";
 
-  let messages: string[] = [];
+  let messages: MessageType[] = [];
 
   const socket = io("http://10.90.137.175/");
-  socket.on("chat message", function (msg: string) {
+  socket.on("chat message", function (msg: MessageType) {
     console.log("received", msg);
     messages.push(msg);
     messages = messages;
@@ -16,8 +17,8 @@
 
 <main>
   <ul>
-    {#each messages as msg}
-      <Message message={msg} />
+    {#each messages as { message, username }}
+      <Message {message} {username} />
     {/each}
   </ul>
 
