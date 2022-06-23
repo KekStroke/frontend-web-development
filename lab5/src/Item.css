@@ -1,0 +1,8 @@
+.item-container {
+  display: flex;
+  gap: 8px;
+}
+
+.item-container label {
+  flex: 1 0 auto;
+}
